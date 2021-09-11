@@ -239,3 +239,174 @@ phpCourse.showCourseInformation();
 - Abstraction (Tính trừu tượng)
 - Polymorphism (Tính đa hình)
 - Encapsulation (Tính đóng gói)
+
+### Bài Tập
+### Problem 1 Reverse number
+
+Implement **`a Javascript function`** that satisfies the following requirement:
+
+- Input: the Integer number
+- Output: the reverse of input number
+
+Notes:
+
+- Input number cannot be converted to string
+- Must be handled by mathematical operators
+
+```jsx
+Example 1:
+  Input: 123
+  Output: 321
+
+Example 2:
+  Input: -123
+  Output: -321
+
+Example 3:
+	Input: 1111
+  Output: 1111
+
+Example 4:
+	Input: 0
+  Output: 0
+```
+
+```jsx
+/*
+  num= -315
+  => baseNum=315
+  
+  Loop:
+    reminder = 5 (chia lấy dư 315 cho 10)
+    baseNum= 31 (chia lấy nguyên 315 cho 10)
+    reverseNum = 0 * 10 + 5 =5
+
+    reminder = 1
+    baseNum= 3
+    reverseNum = 5 * 10 + 1 = 51
+
+    reminder = 3 
+    baseNum= 0
+    reverseNum = 51 * 10 + 3 = 513
+
+    => baseNum = 0 => Stop loop
+
+	  Nếu 
+		+ num < 0 (số âm) => return reverseNum * (-1)
+    + num > 0 =>  return reverseNum 
+*/
+
+function reverseNumber(num) {
+  let reverseNum = 0;
+  let baseNum = Math.abs(num);
+
+  while (baseNum > 0) {
+    let remainder = baseNum % 10;
+    baseNum = Math.floor(baseNum / 10); 
+    reverseNum = reverseNum * 10 + remainder;
+  }
+
+  return num > 0 ? reverseNum : reverseNum * (-1);
+}
+```
+
+### Problem 2: Roman number to Integer number
+
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+```jsx
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+```
+
+For example, `2` is written as `II` in Roman numeral, just two one's added together. `12` is written as `XII`, which is simply `X + II`. The number `27` is written as `XXVII`, which is `XX + V + II`.
+
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not `IIII`. Instead, the number four is written as `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as `IX`. There are six instances where subtraction is used:
+
+- `I` can be placed before `V` (5) and `X` (10) to make 4 and 9.
+- `X` can be placed before `L` (50) and `C` (100) to make 40 and 90.
+- `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
+
+Given a roman numeral, convert it to an integer.
+
+**Example 1:**
+
+```jsx
+Input: s = "III"
+Output: 3
+```
+
+Example 2:
+
+```jsx
+Input: s = "IV"
+Output: 4
+```
+
+Example 3:
+
+```jsx
+Input: s = "IX"
+Output: 9
+```
+
+Example 4
+
+```jsx
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+```
+
+Example 5
+
+```jsx
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+```
+
+```jsx
+
+function romanToInt(str) {
+  const keys = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  let total = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (keys[str[i]] < keys[str[i + 1]]) {
+      total += keys[str[i + 1]] - keys[str[i]];
+      i++;
+    } else {
+			total += keys[str[i]];
+		}
+  }
+
+  return total;
+}
+```
+
+---
+
+### Problem 3
+
+Build a website that satisfies the following requirements:
+
+- Link demo: [https://mindx-ecommerce.netlify.app/](https://mindx-ecommerce.netlify.app/)
+- API to fetch all products: [https://60ae0d5e80a61f00173324bc.mockapi.io/products](https://60ae0d5e80a61f00173324bc.mockapi.io/products)
+- Freedom to create animation
+- Recommend to make your website responsive: PC, Tablet, Mobile
