@@ -1,4 +1,5 @@
 Lecture 02 -  Prepare before getting into ReactJS world
+link notion : https://verbose-case-539.notion.site/Lecture-02-Prepare-before-getting-into-ReactJS-world-e76ce3292c0c410d9e2ac010da1aa47a
 
 ## Timeline
 
