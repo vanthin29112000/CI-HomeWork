@@ -1,8 +1,5 @@
+Link notion :https://verbose-case-539.notion.site/Lecture-01-JS-Core-ES6-02284eac213a4ca5b64dce9d22101346
 ## Lab
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/709267ed-e028-4f07-93c6-9858fdcce52c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/709267ed-e028-4f07-93c6-9858fdcce52c/Untitled.png)
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed6ef2e8-95fd-4863-abff-aeeec2f9e6a3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed6ef2e8-95fd-4863-abff-aeeec2f9e6a3/Untitled.png)
 
 ## Ôn tập JS core
 
